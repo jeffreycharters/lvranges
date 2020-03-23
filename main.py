@@ -16,9 +16,14 @@ def main():
     # Open LabVantage login page and make sure it exists based on the page title.
     driver.get("http://sapphire.lsd.uoguelph.ca:8080/labservices/logon.jsp")
     assert "LabVantage" in driver.title
+
+    # Call the login function. See lv.py for clarification.
+    # Result should be a successful login to LV8.
     lv.login(driver)
 
-    input("Press Enter to bail out...")
+    # TODO: figure out how to get into iframe to interact with stuff.
+
+    time.sleep(3)
 
     # Teardown.
     driver.close()

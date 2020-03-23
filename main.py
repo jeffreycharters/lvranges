@@ -21,7 +21,8 @@ def main():
     # Result should be a successful login to LV8.
     lv.login(driver)
 
-    # TODO: figure out how to get into iframe to interact with stuff.
+    lv.bring_up_submission(driver, "18-074980")
+    lv.enter_data_entry(driver)
 
     time.sleep(3)
 

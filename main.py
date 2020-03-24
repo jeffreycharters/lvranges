@@ -1,5 +1,5 @@
 import time
-import lv
+from lv import *
 
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.keys import Keys
@@ -19,10 +19,10 @@ def main():
 
     # Call the login function. See lv.py for clarification.
     # Result should be a successful login to LV8.
-    lv.login(driver)
+    login(driver)
 
-    lv.bring_up_submission(driver, "18-074980")
-    lv.enter_data_entry(driver)
+    bring_up_submission(driver, "18-074980")
+    enter_data_entry(driver)
 
     time.sleep(3)
 

@@ -1,6 +1,7 @@
 import time
-from selenium.webdriver.common.keys import Keys
+import pyperclip
 
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 
 
@@ -25,18 +26,66 @@ def enter_data_entry(driver):
     driver.find_element_by_id("DataEntryGrid2").click()
 
 
-# Go from 'Manage samples' main screen to the iframe where samples are.
-def go_to_list_iframe(driver):
+# From the 'Manage samples page, will enter data for Submission ID until list of data is empty.
+# List of data should correspond with number of data items for the test code.
+def enter_data_for(driver, submission, data, exit=True, input_class="dataentry2-gridentry"):
+    bring_up_submission(driver, submission)
+    enter_data_entry(driver)
+    inputs = get_input_boxes(driver)
+    tabbed_data = ""
+    for d in data:
+        tabbed_data += str(d)+"\t"
+    pyperclip.copy(tabbed_data[:-1])
+    inputs[0].send_keys(Keys.CONTROL, 'v')
+    time.sleep(3)
+    if exit:
+        save_and_exit_data_entry(driver)
+
+
+# Return to list from Data Entry screen.
+def exit_data_entry(driver):
+    go_to_nav_iframe(driver)
+    driver.find_elements_by_class_name("gwt-HTML")[0].click()
+    # This next section moves the mouse when returning to Manage screen
+    # Without it the sample manage menu will block some functions.
     driver.switch_to.default_content()
-    driver.switch_to.frame("_nav_frame1")
-    time.sleep(0.5)
-    driver.switch_to.frame("list_iframe")
+    action = ActionChains(driver)
+    some_button = driver.find_element_by_id("ws_sortable_top")
+    action.move_to_element(some_button).perform()
+
+
+def save_and_exit_data_entry(driver):
+    go_to_nav_iframe(driver)
+    save_button = driver.find_elements_by_class_name("gwt-HTML")[1]
+    save_button.click()
+    time.sleep(3)
+    exit_data_entry(driver)
+
+
+# From the Data Entry Screen, get the input boxes as a list.
+def get_input_boxes(driver, input_id="dataentry2-gridentry"):
+    go_to_right_iframe(driver)
+    return driver.find_elements_by_class_name(input_id)
 
 
 # Go from 'Manage samples' main screen to iframe with navigation buttons.
 def go_to_nav_iframe(driver):
     driver.switch_to.default_content()
     driver.switch_to.frame("_nav_frame1")
+
+
+# Go from 'Manage samples' main screen to the iframe where samples are.
+def go_to_list_iframe(driver):
+    go_to_nav_iframe(driver)
+    time.sleep(0.5)
+    driver.switch_to.frame("list_iframe")
+
+
+# Go from 'Manage samples' main screen to the iframe where samples are.
+def go_to_right_iframe(driver):
+    go_to_nav_iframe(driver)
+    time.sleep(0.5)
+    driver.switch_to.frame("rightframe")
 
 
 # Gets username and password as strings and log into LabVantage.
@@ -59,3 +108,13 @@ def login(driver, filename="credentials.txt"):
 
     # Make sure credentials were accepted.
     assert "Invalid username or password specified" not in driver.page_source
+
+
+def logout(driver):
+    driver.switch_to.default_content()
+    menu_button = driver.find_element_by_id("e_profilemenu")
+    menu_button.click()
+    driver.find_element_by_partial_link_text("Log Off").click()
+    time.sleep(0.1)
+    # driver.switch_to.alert.accept()
+    assert "LabVantage Logon" in driver.title

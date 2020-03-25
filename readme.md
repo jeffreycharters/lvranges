@@ -4,7 +4,7 @@ This software has been written in order to automate testing using LabVantage 8. 
 
 ## Getting started
 
-In order to use this software you need a UoG LabVantage Account. Put a text file named "credentials.txt" in the same directory as these files. The first line should contain only your username, the second line should contain only your password. Feel free to hard core them if you're a crazy person.
+In order to use this software you need a UoG LabVantage Account. Put a text file named "credentials.txt" in the same directory as these files. The first line should contain only your username, the second line should contain only your password. Feel free to hard code them if you're a crazy person.
 
 ## Commands
 ### Entering Data for a particular submission.

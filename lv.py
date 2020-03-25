@@ -17,6 +17,32 @@ def bring_up_submission(driver, submission):
     driver.find_element_by_name("selector").click()
 
 
+def clear_specifications_and_add(driver, species, tissue):
+    go_to_nav_iframe(driver)
+    details_button = driver.find_elements_by_class_name("gwt-HTML")[7]
+    hover = ActionChains(driver).move_to_element(details_button)
+    hover.perform()
+    specifications_button = driver.find_element_by_id("Specifications")
+    specifications_button.click()
+
+    go_to_maint_iframe(driver)
+    spec_check_box = driver.find_element_by_id("selector_spec_row_0")
+    spec_check_box.click()
+
+    spec_remove_button = driver.find_element_by_id("spec_button_3")
+    spec_remove_button.click()
+
+    driver.switch_to.default_content()
+    driver.find_element_by_id("dlgBtn1_0").click()
+
+    go_to_maint_iframe(driver)
+    add_spec_button = driver.find_element_by_id("spec_button_2")
+    add_spec_button.click()
+
+    # TODO: add new specification to submission.
+    # TODO: return to manage screen.
+
+
 # From 'Manage Samples' main screen, move to data entry - Fast Grid.
 def enter_data_entry(driver):
     go_to_nav_iframe(driver)
@@ -88,9 +114,18 @@ def go_to_right_iframe(driver):
     driver.switch_to.frame("rightframe")
 
 
+def go_to_maint_iframe(driver):
+    driver.switch_to.default_content()
+    time.sleep(0.5)
+    driver.switch_to.frame("dlg_frame0")
+    time.sleep(0.5)
+    driver.switch_to.frame("maint_iframe")
+
 # Gets username and password as strings and log into LabVantage.
 # Gets these from a file in the same directory called "credentials.txt".
 # First line of the file is the username, second is password.
+
+
 def login(driver, filename="credentials.txt"):
     # Open the file and extract the first two lines into variables.
     file = open(filename, "r")

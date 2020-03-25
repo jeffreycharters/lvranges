@@ -2,3 +2,4 @@ venv
 .vscode
 credentials.txt
 __pycache__
+*xlfile*

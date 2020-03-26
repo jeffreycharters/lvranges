@@ -1,5 +1,6 @@
 import openpyxl
 import pprint
+import pyperclip
 
 
 # Adds a row from the spreadsheet into the dictionary.
@@ -30,6 +31,40 @@ def extract_float(cell_content):
     return range_value
 
 
+def get_input_string(ranges, species, type, order=""):
+    input_string = ""
+    if order == "":
+        order = get_elements_order()
+
+    for element in order:
+        if element in ranges[species][type].keys():
+            flag_ok_value = ranges[species][type][element]["flag_ok_value"]
+            input_string += str(flag_ok_value) + "\t"
+        else:
+            input_string += "\t"
+
+    pyperclip.copy(input_string)
+    return
+
+
+def get_elements_order():
+    hmsc_order = ["antimony", "arsenic", "beryllium", "boron", "cadmium", "chromium", "cobalt",
+                  "copper", "iron", "lead", "magnesium", "manganese", "mercury", "molybdenum", "nickel",
+                  "selenium", "thallium", "tin", "zinc"]
+
+    icpti_order = ["calcium", "cobalt", "copper", "iron", "magnesium", "manganese",
+                   "molybdenum", "phosphorus", "potassium", "selenium", "sodium", "zinc"]
+
+    icpse_order = ["manganese", "iron", "cobalt",
+                   "copper", "zinc", "selenium", "molybdenum"]
+
+    elements_in_order = hmsc_order + ["copper", "copper", "lead", "selenium"] + \
+        icpti_order + ["copper", "lead", "selenium",
+                       "selenium"] + icpse_order + ["zinc"]
+
+    return elements_in_order
+
+
 # This function takes a filename and sheet name and extracts the relevant data from it.
 # Designed to take specifically the sheet with our current reference ranges.
 # Elements column may need modified to specificallt display the written element name, e.g. Lead
@@ -43,7 +78,7 @@ def load_data(filename="xlfile.xlsx", sheetname="Nick - Reference Ranges", flags
     for row in range(3, sheet.max_row + 1):
         species = sheet['A' + str(row)].value
         tissue_type = sheet['B' + str(row)].value
-        element = sheet['D' + str(row)].value
+        element = sheet['D' + str(row)].value.lower()
         range1 = extract_float(sheet['E'+str(row)].value)
         range2 = extract_float(sheet['F' + str(row)].value)
         species_dict = add_specs(species, tissue_type, element,
@@ -90,17 +125,7 @@ def add_flagging_values(data):
 
 
 def main():
-    data = load_data()
-
-    data = add_flagging_values(data)
-
-    for species in data:
-        for tissue in data[species]:
-            for element in data[species][tissue]:
-                range_dict = data[species][tissue][element]
-
-                print(species, tissue, element)
-                print(range_dict)
+    ranges = load_data()
 
 
 if __name__ == "__main__":

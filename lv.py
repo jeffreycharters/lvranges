@@ -1,6 +1,7 @@
 import time
 import pyperclip
 
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 
@@ -13,8 +14,31 @@ def bring_up_submission(driver, submission):
     submission_input.clear()
     submission_input.send_keys(
         submission, Keys.RETURN)
-    go_to_list_iframe(driver)
-    driver.find_element_by_name("selector").click()
+    time.sleep(0.5)
+
+
+# This must be called within the Data Entry page.
+# Will return a list of green, black, red for each input box.
+def check_data_flags(driver):
+    raw_flags_list = []
+    inputs = get_input_boxes(driver)
+    for i in range(len(inputs)):
+        if len(inputs[i].get_attribute("value")) > 0:
+            raw_flags_list.append(inputs[i].value_of_css_property("color"))
+        else:
+            raw_flags_list.append(" ")
+
+    flags_list = []
+    for flag in raw_flags_list:
+        if flag == "rgba(0, 0, 0, 1)":
+            flags_list.append("No Range")
+        elif flag == "rgba(0, 128, 0, 1)":
+            flags_list.append("OK")
+        elif flag == "rgba(255, 0, 0, 1)":
+            flags_list.append("Flagged")
+        else:
+            flags_list.append(flag)
+    return flags_list
 
 
 def clear_specifications_and_add(driver, species, tissue):
@@ -26,6 +50,8 @@ def clear_specifications_and_add(driver, species, tissue):
     specifications_button = driver.find_element_by_id("Specifications")
     specifications_button.click()
 
+    time.sleep(1)
+
     go_to_maint_iframe(driver)
     spec_check_box = driver.find_element_by_id("selector_spec_row_0")
     spec_check_box.click()
@@ -34,9 +60,12 @@ def clear_specifications_and_add(driver, species, tissue):
     spec_remove_button.click()
 
     driver.switch_to.default_content()
-    driver.find_element_by_id("dlgBtn1_0").click()
+    dlg_button = driver.find_element_by_class_name("dialog_contents_btn")
+    dlg_button.click()
+    time.sleep(1)
 
-    driver.switch_to.frame("dlg_frame0")
+    dlg_frame = driver.find_elements_by_tag_name("iframe")
+    driver.switch_to.frame(dlg_frame[3])
     save_button = driver.find_element_by_id("Save")
     save_button.click()
 
@@ -78,7 +107,8 @@ def clear_specifications_and_add(driver, species, tissue):
     driver.switch_to.window(main_window)
     driver.switch_to.default_content()
 
-    driver.switch_to.frame("dlg_frame0")
+    dlg_frame = driver.find_elements_by_tag_name("iframe")
+    driver.switch_to.frame(dlg_frame[3])
     save_button = driver.find_element_by_id("Save")
     save_button.click()
 
@@ -86,9 +116,6 @@ def clear_specifications_and_add(driver, species, tissue):
 
     close_button = driver.find_element_by_id("Close")
     close_button.click()
-
-    # TODO: add new specification to submission.
-    # TODO: return to manage screen.
 
 
 # From 'Manage Samples' main screen, move to data entry - Fast Grid.
@@ -102,14 +129,14 @@ def enter_data_entry(driver):
 
 # From the 'Manage samples page, will enter data for Submission ID until list of data is empty.
 # List of data should correspond with number of data items for the test code.
-def enter_data_for(driver, submission, data, exit=True, input_class="dataentry2-gridentry"):
+def enter_data_for(driver, submission, exit=True, input_class="dataentry2-gridentry"):
     bring_up_submission(driver, submission)
+    select_top_sample(driver)
     enter_data_entry(driver)
     inputs = get_input_boxes(driver)
-    tabbed_data = ""
-    for d in data:
-        tabbed_data += str(d)+"\t"
-    pyperclip.copy(tabbed_data[:-1])
+    for input in inputs:
+        input.clear()
+    time.sleep(3)
     inputs[0].send_keys(Keys.CONTROL, 'v')
     time.sleep(3)
     if exit:
@@ -124,6 +151,7 @@ def exit_data_entry(driver):
     # Without it the sample manage menu will block some functions.
     driver.switch_to.default_content()
     action = ActionChains(driver)
+    # The next line moves the pointer off a button which would otherwise hover and break things.
     some_button = driver.find_element_by_id("ws_sortable_top")
     action.move_to_element(some_button).perform()
 
@@ -132,7 +160,7 @@ def save_and_exit_data_entry(driver):
     go_to_nav_iframe(driver)
     save_button = driver.find_elements_by_class_name("gwt-HTML")[1]
     save_button.click()
-    time.sleep(3)
+    time.sleep(5)
     exit_data_entry(driver)
 
 
@@ -165,7 +193,8 @@ def go_to_right_iframe(driver):
 def go_to_maint_iframe(driver):
     driver.switch_to.default_content()
     time.sleep(0.5)
-    driver.switch_to.frame("dlg_frame0")
+    dlg_frame = driver.find_elements_by_tag_name("iframe")
+    driver.switch_to.frame(dlg_frame[3])
     time.sleep(0.5)
     driver.switch_to.frame("maint_iframe")
 
@@ -182,7 +211,7 @@ def login(driver, filename="credentials.txt"):
 
     # Find the username field and populate it.
     username_field = driver.find_element_by_id("databaseusername")
-    username_field.send_keys(username[:-1])
+    username_field.send_keys(username[: -1])
 
     # Find the password field, populate it and submit.
     password_field = driver.find_element_by_id("databasepassword")
@@ -201,3 +230,9 @@ def logout(driver):
     time.sleep(0.1)
     # driver.switch_to.alert.accept()
     assert "LabVantage Logon" in driver.title
+
+
+def select_top_sample(driver):
+    go_to_list_iframe(driver)
+    driver.find_element_by_name("selector").click()
+    time.sleep(0.5)

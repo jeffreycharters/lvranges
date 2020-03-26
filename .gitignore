@@ -4,3 +4,4 @@ credentials.txt
 __pycache__
 *xlfile*
 delete.py
+*ranges_output*

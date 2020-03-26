@@ -53,7 +53,7 @@ def main():
 
     # Load the submission then add a new specification to it.
     bring_up_submission(driver, "18-074980")
-    clear_specifications_and_add(driver, "bovine", "kidney")
+    clear_specifications_and_add(driver, "Bovine", "kidney")
     # TODO: finish this function. Make sure it loads the correct specification, not old!!
 
     # TODO: enter correct data for each specification.

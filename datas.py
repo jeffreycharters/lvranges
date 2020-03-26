@@ -41,9 +41,9 @@ def load_data(filename="xlfile.xlsx", sheetname="Nick - Reference Ranges", flags
     sheet = wb["Nick - Reference Ranges"]
 
     for row in range(3, sheet.max_row + 1):
-        species = sheet['A' + str(row)].value.lower()
-        tissue_type = sheet['B' + str(row)].value.lower()
-        element = sheet['D' + str(row)].value.lower()
+        species = sheet['A' + str(row)].value
+        tissue_type = sheet['B' + str(row)].value
+        element = sheet['D' + str(row)].value
         range1 = extract_float(sheet['E'+str(row)].value)
         range2 = extract_float(sheet['F' + str(row)].value)
         species_dict = add_specs(species, tissue_type, element,

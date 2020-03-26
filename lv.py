@@ -18,6 +18,7 @@ def bring_up_submission(driver, submission):
 
 
 def clear_specifications_and_add(driver, species, tissue):
+    main_window = driver.current_window_handle
     go_to_nav_iframe(driver)
     details_button = driver.find_elements_by_class_name("gwt-HTML")[7]
     hover = ActionChains(driver).move_to_element(details_button)
@@ -35,9 +36,56 @@ def clear_specifications_and_add(driver, species, tissue):
     driver.switch_to.default_content()
     driver.find_element_by_id("dlgBtn1_0").click()
 
+    driver.switch_to.frame("dlg_frame0")
+    save_button = driver.find_element_by_id("Save")
+    save_button.click()
+
     go_to_maint_iframe(driver)
     add_spec_button = driver.find_element_by_id("spec_button_2")
     add_spec_button.click()
+
+    driver.switch_to.window("spec")
+    spec_search_box = driver.find_element_by_id("searchtext")
+    spec_search_box.send_keys(species+"-"+tissue)
+    spec_search_box.send_keys(Keys.RETURN)
+
+    driver.switch_to.frame("list_iframe")
+    highest = 0
+    maxxed = False
+    upper_species = species.title()
+    if tissue == "serum-rbt":
+        tissue = "Serum-RBT"
+    else:
+        upper_tissue = tissue.title()
+
+    id_string = upper_species + "-" + tissue + "|"
+    while not maxxed:
+        search_id_string = id_string + str(highest+1)
+        try:
+            driver.find_element_by_id(search_id_string)
+        except:
+            maxxed = True
+            continue
+        highest += 1
+
+    most_recent_checkbox = driver.find_element_by_id(id_string + str(highest))
+    most_recent_checkbox.click()
+
+    driver.switch_to.default_content()
+    return_button = driver.find_element_by_id("SelectReturn")
+    return_button.click()
+
+    driver.switch_to.window(main_window)
+    driver.switch_to.default_content()
+
+    driver.switch_to.frame("dlg_frame0")
+    save_button = driver.find_element_by_id("Save")
+    save_button.click()
+
+    time.sleep(3)
+
+    close_button = driver.find_element_by_id("Close")
+    close_button.click()
 
     # TODO: add new specification to submission.
     # TODO: return to manage screen.

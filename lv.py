@@ -169,7 +169,6 @@ def exit_data_entry(driver):
 
             alert = driver.switch_to.alert
             alert.accept()
-            print("alert accepted")
         except:
             print("no alert")
         time.sleep(0.5)

@@ -58,7 +58,7 @@ def autoresize_columns(ws):
                 dims[cell.column_letter] = max(
                     (dims.get(cell.column_letter, 0), len(str(cell.value))))
     for col, value in dims.items():
-        ws.column_dimensions[col].width = value * 1.4
+        ws.column_dimensions[col].width = value * 1.2
     ws.column_dimensions['A'].width = 20
 
 
@@ -103,12 +103,18 @@ def save_workbook(wb, filename="ranges_output.xlsx"):
     wb.save(filename)
 
 
-def write_tissue_row(ws, flags_list, base_row):
+def string_to_list(string):
+    list = string.split("\t")
+    return list
+
+
+def write_tissue_row(ws, flags_list, base_row, input_string):
+    input_list = string_to_list(input_string)
     column = 1
     for i in range(1, 35):
         current_cell = get_column_letter(column)+str(base_row)
         current_flag = flags_list[i]
-        ws[current_cell] = current_flag
+        ws[current_cell] = input_list[i] + " - " + current_flag
         if current_flag == "OK":
             make_ok_cell(ws, current_cell)
         elif current_flag == "Flagged":
@@ -119,12 +125,13 @@ def write_tissue_row(ws, flags_list, base_row):
         column += 1
 
 
-def write_serum_row(ws, flags_list, base_row):
+def write_serum_row(ws, flags_list, base_row, input_string):
+    input_list = string_to_list(input_string)
     column = 1
     for i in range(35, 47):
         current_cell = get_column_letter(column)+str(base_row)
         current_flag = flags_list[i]
-        ws[current_cell] = current_flag
+        ws[current_cell] = input_list[i] + " - " + current_flag
         if current_flag == "OK":
             make_ok_cell(ws, current_cell)
         elif current_flag == "Flagged":

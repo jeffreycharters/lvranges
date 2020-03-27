@@ -31,20 +31,28 @@ def extract_float(cell_content):
     return range_value
 
 
-def get_input_string(ranges, species, type, order=""):
+def get_input_string(ranges, species, type, test_type, order=""):
     input_string = ""
     if order == "":
         order = get_elements_order()
 
     for element in order:
         if element in ranges[species][type].keys():
-            flag_ok_value = ranges[species][type][element]["flag_ok_value"]
-            input_string += str(flag_ok_value) + "\t"
+            if test_type in ranges[species][type][element].keys():
+                flag_value = ranges[species][type][element][test_type]
+                input_string += str(flag_value) + "\t"
+            else:
+                input_string += "-444\t"
         else:
-            input_string += "\t"
+            if test_type == "flag_low_value":
+                input_string += "0.01\t"
+            elif test_type == "flag_ok_value":
+                input_string += "1\t"
+            elif test_type == "flag_high_value":
+                input_string += "1000\t"
 
     pyperclip.copy(input_string)
-    return
+    return input_string
 
 
 def get_elements_order():
@@ -101,7 +109,7 @@ def add_flagging_values(data):
             for element in data[species][tissue]:
                 range_dict = data[species][tissue][element]
 
-                if species == "bovine" and element == "cobalt":
+                if species == "bovine" and element == "cobalt" and tissue == "serum":
                     range_dict["flag_low_value"] = round(
                         range_dict["range1"] * 0.9, 3)
                     range_dict["flag_ok_value"] = round(

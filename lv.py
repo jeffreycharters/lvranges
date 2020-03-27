@@ -2,6 +2,9 @@ import time
 import pyperclip
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 
@@ -9,7 +12,7 @@ from selenium.webdriver import ActionChains
 # From 'Manage Samples' main screen, bring a particular submission into list_iframe.
 def bring_up_submission(driver, submission):
     go_to_nav_iframe(driver)
-    driver.find_element_by_link_text("SampleBySubmission").click()
+    driver.find_element_by_id("td_SampleBySubmission").click()
     submission_input = driver.find_element_by_id("SampleBySubmission_arg1")
     submission_input.clear()
     submission_input.send_keys(
@@ -37,7 +40,7 @@ def check_data_flags(driver):
         elif flag == "rgba(255, 0, 0, 1)":
             flags_list.append("Flagged")
         else:
-            flags_list.append(flag)
+            flags_list.append("No Input")
     return flags_list
 
 
@@ -81,13 +84,8 @@ def clear_specifications_and_add(driver, species, tissue):
     driver.switch_to.frame("list_iframe")
     highest = 0
     maxxed = False
-    upper_species = species.title()
-    if tissue == "serum-rbt":
-        tissue = "Serum-RBT"
-    else:
-        upper_tissue = tissue.title()
 
-    id_string = upper_species + "-" + tissue + "|"
+    id_string = species + "-" + tissue + "|"
     while not maxxed:
         search_id_string = id_string + str(highest+1)
         try:
@@ -107,15 +105,20 @@ def clear_specifications_and_add(driver, species, tissue):
     driver.switch_to.window(main_window)
     driver.switch_to.default_content()
 
+    time.sleep(1)
+
     dlg_frame = driver.find_elements_by_tag_name("iframe")
     driver.switch_to.frame(dlg_frame[3])
     save_button = driver.find_element_by_id("Save")
     save_button.click()
 
-    time.sleep(3)
+    time.sleep(2)
 
-    close_button = driver.find_element_by_id("Close")
-    close_button.click()
+    dlg_frame = driver.find_elements_by_tag_name("iframe")
+    # return_button = WebDriverWait(driver, 30).until(
+    #    EC.element_to_be_clickable((By.ID, "Close")))
+    return_button = driver.find_element_by_id("Close")
+    return_button.click()
 
 
 # From 'Manage Samples' main screen, move to data entry - Fast Grid.
@@ -127,18 +130,24 @@ def enter_data_entry(driver):
     driver.find_element_by_id("DataEntryGrid2").click()
 
 
-# From the 'Manage samples page, will enter data for Submission ID until list of data is empty.
-# List of data should correspond with number of data items for the test code.
-def enter_data_for(driver, submission, exit=True, input_class="dataentry2-gridentry"):
-    bring_up_submission(driver, submission)
-    select_top_sample(driver)
-    enter_data_entry(driver)
+def clear_inputs_and_paste_new(driver):
+    go_to_nav_iframe(driver)
     inputs = get_input_boxes(driver)
     for input in inputs:
         input.clear()
     time.sleep(3)
     inputs[0].send_keys(Keys.CONTROL, 'v')
     time.sleep(3)
+
+# From the 'Manage samples page, will enter data for Submission ID until list of data is empty.
+# List of data should correspond with number of data items for the test code.
+
+
+def enter_data_for(driver, submission, exit=True, input_class="dataentry2-gridentry"):
+    bring_up_submission(driver, submission)
+    select_top_sample(driver)
+    enter_data_entry(driver)
+    clear_inputs_and_paste_new(driver)
     if exit:
         save_and_exit_data_entry(driver)
 
@@ -146,7 +155,25 @@ def enter_data_for(driver, submission, exit=True, input_class="dataentry2-griden
 # Return to list from Data Entry screen.
 def exit_data_entry(driver):
     go_to_nav_iframe(driver)
-    driver.find_elements_by_class_name("gwt-HTML")[0].click()
+    time.sleep(2)
+    # close_button = WebDriverWait(driver, 20).until(
+    #    EC.element_to_be_clickable((By.CLASS_NAME, "gwt-HTML")))
+    return_button = driver.find_element_by_class_name("gwt-HTML")
+    return_button.click()
+
+    for i in range(2):
+        try:
+            WebDriverWait(driver, 3).until(EC.alert_is_present(),
+                                           'Timed out waiting for PA creation ' +
+                                           'confirmation popup to appear.')
+
+            alert = driver.switch_to.alert
+            alert.accept()
+            print("alert accepted")
+        except:
+            print("no alert")
+        time.sleep(0.5)
+
     # This next section moves the mouse when returning to Manage screen
     # Without it the sample manage menu will block some functions.
     driver.switch_to.default_content()
@@ -160,7 +187,7 @@ def save_and_exit_data_entry(driver):
     go_to_nav_iframe(driver)
     save_button = driver.find_elements_by_class_name("gwt-HTML")[1]
     save_button.click()
-    time.sleep(5)
+    time.sleep(7)
     exit_data_entry(driver)
 
 

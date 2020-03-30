@@ -81,8 +81,8 @@ def clear_specifications_and_add(driver, species, tissue):
     driver.switch_to.frame(dlg_frame[3])
     save_button = driver.find_element_by_id("Save")
     save_button.click()
-    
     '''
+
     try:
         find_and_click_add_spec_button(driver)
     except:
@@ -99,18 +99,17 @@ def clear_specifications_and_add(driver, species, tissue):
     highest = 0
     maxxed = False
 
-    '''
-    Need to make this section able to skip a version number.
-    Pretty sure this happens for avian - citrate, for example.
-    '''
     id_string = species + "-" + tissue + "|"
     while not maxxed:
         search_id_string = id_string + str(highest+1)
         try:
             driver.find_element_by_id(search_id_string)
         except:
-            maxxed = True
-            continue
+            try:
+                driver.find_element_by_id(id_string + str(highest+2))
+            except:
+                maxxed = True
+                continue
         highest += 1
 
     most_recent_checkbox = driver.find_element_by_id(id_string + str(highest))
@@ -132,7 +131,6 @@ def clear_specifications_and_add(driver, species, tissue):
 
     time.sleep(2)
 
-    # dlg_frame = driver.find_elements_by_tag_name("iframe")
     exit_specifications_window(driver)
 
 
@@ -182,9 +180,6 @@ def exit_specifications_window(driver):
 def exit_data_entry(driver):
     go_to_nav_iframe(driver)
     time.sleep(2)
-    '''
-    It sometimes struggles here - find a fix?!
-    '''
     return_button = driver.find_element_by_class_name("gwt-HTML")
     return_button.click()
 

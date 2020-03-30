@@ -47,7 +47,7 @@ def main():
     # # # # # # # # # # # # # # # # # # # # # # # # # #
 
     # Load the submission then add a new specification to it.
-    #bring_up_submission(driver, "18-074980")
+    bring_up_submission(driver, "18-074980")
 
     wb, ws = outputs.create_workbook()
 
@@ -79,8 +79,25 @@ def main():
 
             # Add the new specification
             select_top_sample(driver)
+
             clear_specifications_and_add(driver, species, type)
-            enter_data_entry(driver)
+
+            # Program gets stuck here a lot. Loop until it works!!
+            in_data_entry = False
+            while not in_data_entry:
+                # First, try to enter the data entry screen.
+                try:
+                    enter_data_entry(driver)
+                    in_data_entry = True
+                # If this fails, try again.
+                except:
+                    # If this try succeeds, great, enter data entry.
+                    # If not, try closing the specs window again first.
+                    try:
+                        print("\t\tRetrying to exit specs window.")
+                        exit_specifications_window(driver)
+                    except:
+                        pass
 
             tissue_headers = False
             serum_headers = False
@@ -117,7 +134,7 @@ def main():
             exit_data_entry(driver)
             outputs.autoresize_columns(ws)
             outputs.save_workbook(wb)
-            base_row += 1
+            base_row += 2
 
     outputs.autoresize_columns(ws)
 

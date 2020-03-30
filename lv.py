@@ -51,7 +51,16 @@ def clear_specifications_and_add(driver, species, tissue):
     hover = ActionChains(driver).move_to_element(details_button)
     hover.perform()
     specifications_button = driver.find_element_by_id("Specifications")
-    specifications_button.click()
+    try:
+        specifications_button.click()
+    except:
+        print("\t\tRetrying to find specifications_button")
+        go_to_nav_iframe(driver)
+        details_button = driver.find_elements_by_class_name("gwt-HTML")[7]
+        hover = ActionChains(driver).move_to_element(details_button)
+        hover.perform()
+        specifications_button = driver.find_element_by_id("Specifications")
+        specifications_button.click()
 
     time.sleep(1)
 
@@ -67,14 +76,19 @@ def clear_specifications_and_add(driver, species, tissue):
     dlg_button.click()
     time.sleep(1)
 
+    ''' Don't think we really need to save until new spec is added.
     dlg_frame = driver.find_elements_by_tag_name("iframe")
     driver.switch_to.frame(dlg_frame[3])
     save_button = driver.find_element_by_id("Save")
     save_button.click()
-
-    go_to_maint_iframe(driver)
-    add_spec_button = driver.find_element_by_id("spec_button_2")
-    add_spec_button.click()
+    
+    '''
+    try:
+        find_and_click_add_spec_button(driver)
+    except:
+        print("\t\tRetrying to find add_spec_button")
+        time.sleep(3)
+        find_and_click_add_spec_button(driver)
 
     driver.switch_to.window("spec")
     spec_search_box = driver.find_element_by_id("searchtext")
@@ -85,6 +99,10 @@ def clear_specifications_and_add(driver, species, tissue):
     highest = 0
     maxxed = False
 
+    '''
+    Need to make this section able to skip a version number.
+    Pretty sure this happens for avian - citrate, for example.
+    '''
     id_string = species + "-" + tissue + "|"
     while not maxxed:
         search_id_string = id_string + str(highest+1)
@@ -114,11 +132,8 @@ def clear_specifications_and_add(driver, species, tissue):
 
     time.sleep(2)
 
-    dlg_frame = driver.find_elements_by_tag_name("iframe")
-    # return_button = WebDriverWait(driver, 30).until(
-    #    EC.element_to_be_clickable((By.ID, "Close")))
-    return_button = driver.find_element_by_id("Close")
-    return_button.click()
+    # dlg_frame = driver.find_elements_by_tag_name("iframe")
+    exit_specifications_window(driver)
 
 
 # From 'Manage Samples' main screen, move to data entry - Fast Grid.
@@ -130,6 +145,7 @@ def enter_data_entry(driver):
     driver.find_element_by_id("DataEntryGrid2").click()
 
 
+# In the Data Entry screen, clears all current data and sends paste command.
 def clear_inputs_and_paste_new(driver):
     go_to_nav_iframe(driver)
     inputs = get_input_boxes(driver)
@@ -139,10 +155,9 @@ def clear_inputs_and_paste_new(driver):
     inputs[0].send_keys(Keys.CONTROL, 'v')
     time.sleep(3)
 
+
 # From the 'Manage samples page, will enter data for Submission ID until list of data is empty.
 # List of data should correspond with number of data items for the test code.
-
-
 def enter_data_for(driver, submission, exit=True, input_class="dataentry2-gridentry"):
     bring_up_submission(driver, submission)
     select_top_sample(driver)
@@ -152,12 +167,24 @@ def enter_data_for(driver, submission, exit=True, input_class="dataentry2-griden
         save_and_exit_data_entry(driver)
 
 
+def exit_specifications_window(driver):
+    return_button = driver.find_element_by_id("Close")
+    try:
+        return_button.click()
+    except:
+        print("\t\tRetrying to exit specifications window.")
+        time.sleep(5)
+        return_button.click()
+
 # Return to list from Data Entry screen.
+
+
 def exit_data_entry(driver):
     go_to_nav_iframe(driver)
     time.sleep(2)
-    # close_button = WebDriverWait(driver, 20).until(
-    #    EC.element_to_be_clickable((By.CLASS_NAME, "gwt-HTML")))
+    '''
+    It sometimes struggles here - find a fix?!
+    '''
     return_button = driver.find_element_by_class_name("gwt-HTML")
     return_button.click()
 
@@ -171,6 +198,7 @@ def exit_data_entry(driver):
             alert.accept()
         except:
             print("no alert")
+            exit_data_entry(driver)
         time.sleep(0.5)
 
     # This next section moves the mouse when returning to Manage screen
@@ -180,6 +208,12 @@ def exit_data_entry(driver):
     # The next line moves the pointer off a button which would otherwise hover and break things.
     some_button = driver.find_element_by_id("ws_sortable_top")
     action.move_to_element(some_button).perform()
+
+
+def find_and_click_add_spec_button(driver):
+    go_to_maint_iframe(driver)
+    add_spec_button = driver.find_element_by_id("spec_button_2")
+    add_spec_button.click()
 
 
 def save_and_exit_data_entry(driver):
@@ -192,6 +226,7 @@ def save_and_exit_data_entry(driver):
 
 # From the Data Entry Screen, get the input boxes as a list.
 def get_input_boxes(driver, input_id="dataentry2-gridentry"):
+    time.sleep(0.5)
     go_to_right_iframe(driver)
     return driver.find_elements_by_class_name(input_id)
 

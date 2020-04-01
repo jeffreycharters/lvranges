@@ -5,17 +5,27 @@ import pyperclip
 
 # Adds a row from the spreadsheet into the dictionary.
 # Returns the same dictionary with information added.
-def add_specs(species, tissue_type, element, range1, range2, species_dict):
-    range_dict = {"range1": range1, "range2": range2}
+def add_specs(species, matrix, element, spec_version_id,
+              param_list_id, param_id, range1_qualifier, range2_qualifier,
+              range1_value, range2_value, species_dict):
+    range_dict = {
+        "range1_qualifier": range1_qualifier,
+        "range1_value": range1_value,
+        "range2_qualifier": range2_qualifier,
+        "range2_value": range2_value,
+        "spec_version_id": spec_version_id,
+        "param_list_id": param_list_id,
+        "param_id": param_id
+    }
 
     # These if statements make sure keys don't already exist. If they do, we won't overwrite them.
     if species in species_dict:
-        if tissue_type in species_dict[species]:
-            species_dict[species][tissue_type][element] = range_dict
+        if matrix in species_dict[species]:
+            species_dict[species][matrix][element] = range_dict
         else:
-            species_dict[species][tissue_type] = {element: range_dict}
+            species_dict[species][matrix] = {element: range_dict}
     else:
-        species_dict[species] = {tissue_type: {element: range_dict}}
+        species_dict[species] = {matrix: {element: range_dict}}
 
     return species_dict
 
@@ -29,6 +39,43 @@ def extract_float(cell_content):
         except ValueError:
             pass
     return range_value
+
+
+def get_qualifier(string):
+    list = string.split(" ", 1)
+    return list[0]
+
+
+def get_element(param_id):
+    converter = {
+        'Lead blood': "lead",
+        'Magnesium': "magnesium",
+        'Selenium tissue': "selenium",
+        'tmo': "molybdenum",
+        'Iron': "iron",
+        'tcu': "copper",
+        'tfe': "iron",
+        'Magnesium serum': "magnesium",
+        'Selenium': "selenium",
+        'tse': "selenium",
+        'Calcium': "calcium",
+        'Lead': "lead",
+        'tmn': "manganese",
+        'Zinc-Serum': "zinc",
+        'Calcium serum': "calcium",
+        'Copper': "copper",
+        'Manganese': "manganese",
+        'tco': "cobalt",
+        'Arsenic': "aresenic",
+        'tzn': "zinc",
+        'Copper serum': "copper",
+        'Cadmium': "cadmium",
+        'Ca': "calcium",
+        'Hg': "mercury",
+        'Zinc': "zinc"
+    }
+    # Find the param_id in the dictionary, if not present will return unknown.
+    return converter.get(param_id, "unknown")
 
 
 def get_input_string(ranges, species, type, test_type, order=""):
@@ -78,19 +125,30 @@ def get_elements_order():
 # Elements column may need modified to specificallt display the written element name, e.g. Lead
 def load_data(filename="xlfile.xlsx", sheetname="Nick - Reference Ranges", flags=True):
 
-    species_dict = dict()
+    species_dict = {}
     # TODO: Load xl file, start populating ranges.
     wb = openpyxl.load_workbook(filename)
-    sheet = wb["Nick - Reference Ranges"]
+    sheet = wb[sheetname]
 
-    for row in range(3, sheet.max_row + 1):
-        species = sheet['A' + str(row)].value
-        tissue_type = sheet['B' + str(row)].value
-        element = sheet['D' + str(row)].value.lower()
-        range1 = extract_float(sheet['E'+str(row)].value)
-        range2 = extract_float(sheet['F' + str(row)].value)
-        species_dict = add_specs(species, tissue_type, element,
-                                 range1, range2, species_dict)
+    for row in range(2, sheet.max_row + 1):
+        column_a = sheet['A' + str(row)].value
+        species, matrix = column_a.split("-", 1)
+        spec_version_id = sheet['B' + str(row)].value
+        param_list_id = sheet['C' + str(row)].value
+        param_id = sheet['D' + str(row)].value
+        range1 = sheet['E' + str(row)].value
+        range2 = sheet['F' + str(row)].value
+
+        range1_qualifier = get_qualifier(range1)
+        range2_qualifier = get_qualifier(range2)
+        range1_value = extract_float(range1)
+        range2_value = extract_float(range2)
+
+        element = get_element(param_id)
+
+        species_dict = add_specs(species, matrix, element, spec_version_id,
+                                 param_list_id, param_id, range1_qualifier, range2_qualifier,
+                                 range1_value, range2_value, species_dict)
 
     wb.close()
 
@@ -111,23 +169,24 @@ def add_flagging_values(data):
 
                 if species == "bovine" and element == "cobalt" and tissue == "serum":
                     range_dict["flag_low_value"] = round(
-                        range_dict["range1"] * 0.9, 3)
+                        range_dict["range1_value"] * 0.9, 3)
                     range_dict["flag_ok_value"] = round(
-                        range_dict["range1"] * 1.1, 3)
+                        range_dict["range1_value"] * 1.1, 3)
 
-                elif not range_dict["range2"]:
+                elif not range_dict["range2_value"]:
+                    range_dict["flag_low_value"] = "-666"
                     range_dict["flag_ok_value"] = round(
-                        range_dict["range1"] * 0.9, 3)
+                        range_dict["range1_value"] * 0.9, 3)
                     range_dict["flag_high_value"] = round(
-                        range_dict["range1"] * 1.1, 3)
+                        range_dict["range1_value"] * 1.1, 3)
 
                 else:
                     range_dict["flag_low_value"] = round(
-                        range_dict["range1"] * 0.9, 3)
+                        range_dict["range1_value"] * 0.9, 3)
                     range_dict["flag_ok_value"] = round((
-                        range_dict["range1"] + range_dict["range2"]) / 2, 3)
+                        range_dict["range1_value"] + range_dict["range2_value"]) / 2, 3)
                     range_dict["flag_high_value"] = round(
-                        range_dict["range2"] * 1.1, 3)
+                        range_dict["range2_value"] * 1.1, 3)
 
     return data
 

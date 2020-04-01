@@ -95,7 +95,7 @@ def main():
                     # If not, try closing the specs window again first.
                     try:
                         print("\t\tRetrying to exit specs window.")
-                        driver.switch_to.window(main_window)
+                        driver.switch_to.window(driver.current_window_handle)
                         driver.switch_to.default_content()
                         dlg_frame = driver.find_element_by_tag_name("iframe")
                         driver.switch_to.frame(dlg_frame[3])

@@ -5,5 +5,8 @@ __pycache__
 *xlfile*
 delete.py
 *ranges_output*
-ranges.json
+*.json
+*.png
 debug.log
+static
+templates

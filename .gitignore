@@ -10,3 +10,4 @@ delete.py
 debug.log
 static
 templates
+buildnewjson.py

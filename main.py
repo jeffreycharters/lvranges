@@ -18,10 +18,12 @@ def main():
     order = datas.get_elements_order()
 
     excel_filename = "xlfile.xlsx"
-    xl_sheetname = "Nick - Reference Ranges"
+    xl_sheetname = "Export Worksheet"
+
+    ranges = {}
 
     ranges = datas.load_data(filename=excel_filename,
-                             sheetname=xl_sheetname, flags=True)
+                             sheetname=xl_sheetname, species_dict=ranges, flags=True)
 
     print("Data Loaded OK")
 
@@ -80,11 +82,15 @@ def main():
             # Add the new specification
             select_top_sample(driver)
 
-            clear_specifications_and_add(driver, species, type)
+            element = random.choice(list(ranges[species][type]))
+            spec_version_id = ranges[species][type][element]["spec_version_id"]
+            clear_specifications_and_add(
+                driver, species, type, spec_version_id)
 
             # Program gets stuck here a lot. Loop until it works!!
             in_data_entry = False
             while not in_data_entry:
+                main_window = driver.current_window_handle
                 # First, try to enter the data entry screen.
                 try:
                     enter_data_entry(driver)
@@ -95,7 +101,7 @@ def main():
                     # If not, try closing the specs window again first.
                     try:
                         print("\t\tRetrying to exit specs window.")
-                        driver.switch_to.window(driver.current_window_handle)
+                        driver.switch_to.window(main_window)
                         driver.switch_to.default_content()
                         dlg_frame = driver.find_element_by_tag_name("iframe")
                         driver.switch_to.frame(dlg_frame[3])

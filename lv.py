@@ -44,7 +44,7 @@ def check_data_flags(driver):
     return flags_list
 
 
-def clear_specifications_and_add(driver, species, tissue):
+def clear_specifications_and_add(driver, species, matrix, spec_version_id):
     main_window = driver.current_window_handle
     go_to_nav_iframe(driver)
     details_button = driver.find_elements_by_class_name("gwt-HTML")[7]
@@ -92,27 +92,15 @@ def clear_specifications_and_add(driver, species, tissue):
 
     driver.switch_to.window("spec")
     spec_search_box = driver.find_element_by_id("searchtext")
-    spec_search_box.send_keys(species+"-"+tissue)
+    spec_search_box.send_keys(species+"-"+matrix)
     spec_search_box.send_keys(Keys.RETURN)
 
     driver.switch_to.frame("list_iframe")
-    highest = 0
-    maxxed = False
 
-    id_string = species + "-" + tissue + "|"
-    while not maxxed:
-        search_id_string = id_string + str(highest+1)
-        try:
-            driver.find_element_by_id(search_id_string)
-        except:
-            try:
-                driver.find_element_by_id(id_string + str(highest+2))
-            except:
-                maxxed = True
-                continue
-        highest += 1
+    # ADD THE SPEC VERSION ID HERE!!!
+    id_string = species + "-" + matrix + "|" + spec_version_id
 
-    most_recent_checkbox = driver.find_element_by_id(id_string + str(highest))
+    most_recent_checkbox = driver.find_element_by_id(id_string)
     most_recent_checkbox.click()
 
     driver.switch_to.default_content()

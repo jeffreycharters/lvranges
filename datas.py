@@ -72,7 +72,14 @@ def get_element(param_id):
         'Cadmium': "cadmium",
         'Ca': "calcium",
         'Hg': "mercury",
-        'Zinc': "zinc"
+        'Zinc': "zinc",
+        "Phosphorous": 'phosphorus',
+        "Sodium": "sodium",
+        "Potassium": 'potassium',
+        "Molybdenum": "molybdenum",
+        "Cobalt": "cobalt",
+        "Chromium": "chromium",
+        "sodium": "sodium"
     }
     # Find the param_id in the dictionary, if not present will return unknown.
     return converter.get(param_id, "unknown")
@@ -113,9 +120,12 @@ def get_elements_order():
     icpse_order = ["manganese", "iron", "cobalt",
                    "copper", "zinc", "selenium", "molybdenum"]
 
+    salsc_order = ["phosphorus", "sulphur", "sodium",
+                   "calcium", "potassium", "magnesium"]
+
     elements_in_order = hmsc_order + ["copper", "copper", "lead", "selenium"] + \
         icpti_order + ["copper", "lead", "selenium",
-                       "selenium"] + icpse_order + ["zinc"]
+                       "selenium"] + icpse_order + ["zinc"] + salsc_order
 
     return elements_in_order
 
@@ -123,16 +133,33 @@ def get_elements_order():
 # This function takes a filename and sheet name and extracts the relevant data from it.
 # Designed to take specifically the sheet with our current reference ranges.
 # Elements column may need modified to specificallt display the written element name, e.g. Lead
-def load_data(filename="xlfile.xlsx", sheetname="Nick - Reference Ranges", flags=True):
+def load_data(filename="xlfile.xlsx", sheetname="Nick - Reference Ranges", species_dict={}, flags=True, pared_down=False):
 
-    species_dict = {}
     # TODO: Load xl file, start populating ranges.
     wb = openpyxl.load_workbook(filename)
     sheet = wb[sheetname]
 
     for row in range(2, sheet.max_row + 1):
         column_a = sheet['A' + str(row)].value
+
+        # Have to add exceptions since we can't just be consistent apparently
+        # I can't figure out what this is and there seems to be proper versions so to hell with it.
+        if column_a == "Feline w-blood" or column_a == "Feline w-blood hepar":
+            continue
+
         species, matrix = column_a.split("-", 1)
+
+        # Need to deal with the EXCEPTIONS
+        if species == "Bov":
+            species = "Bovine"
+        elif species == "caprine":
+            species = "Caprine"
+
+        # Only add the major sample types if requested
+        if pared_down:
+            if matrix not in ["liver", "kidney", "serum", "plasma", "blood"]:
+                continue
+
         spec_version_id = sheet['B' + str(row)].value
         param_list_id = sheet['C' + str(row)].value
         param_id = sheet['D' + str(row)].value

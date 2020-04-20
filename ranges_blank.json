@@ -1,0 +1,2362 @@
+{
+	"Alpaca": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Avian": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Bovine": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Canine": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Caprine": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Cervid": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Equine": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Feline": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Ovine": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	},
+	"Porcine": {
+		"liver": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"kidney": {
+			"antimony": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"beryllium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"boron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cadmium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"chromium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"magnesium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"nickel": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"thallium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"tin": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"serum": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"blood": {
+			"arsenic": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"lead": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"mercury": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		},
+		"plasma": {
+			"cobalt": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"copper": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"iron": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"manganese": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"molybdenum": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"selenium": {
+				"range1": "NaN",
+				"range2": "NaN"
+			},
+			"zinc": {
+				"range1": "NaN",
+				"range2": "NaN"
+			}
+		}
+	}
+}

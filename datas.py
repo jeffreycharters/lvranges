@@ -66,7 +66,7 @@ def get_element(param_id):
         'Copper': "copper",
         'Manganese': "manganese",
         'tco': "cobalt",
-        'Arsenic': "aresenic",
+        'Arsenic': "arsenic",
         'tzn': "zinc",
         'Copper serum': "copper",
         'Cadmium': "cadmium",
